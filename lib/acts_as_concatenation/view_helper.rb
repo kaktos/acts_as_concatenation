@@ -48,7 +48,7 @@ module ActionView
         
         tagname = tag_name + '[]'
 
-        s = "<input type='hidden' name='#{tagname}' value=''style='display:none;'/>"
+        s = "<input type='hidden' name='#{tagname}' value='' style='display:none;'/>"
         s << "<ul id=#{ulid} class=selectbox-group>"
         choices.each do |o|
           if_checked = real_values.include?(o[1].to_s) ? "checked='checked'" : ""
