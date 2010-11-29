@@ -1,8 +1,1 @@
-require 'acts_as_concatenation'
-
-ActiveRecord::Base.send :include, ActsAsConcatenation
-
-if defined?(ActionView)
-  require 'acts_as_concatenation/view_helper'
-  ActionView::Base.send :include, ActsAsConcatenation::ViewHelper
-end
+require File.expand_path(File.join(File.dirname(__FILE__), "..", "init"))

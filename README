@@ -1,13 +1,18 @@
 ActsAsConcatenation
 ===================
 
-Introduction goes here.
+This plugin make multiple selected values joined into a single database column.
 
 
 Example
 =======
 
-Example goes here.
+class Product < ActiveRecord::Base
+  acts_as_concatenation :compatible_with
+end
 
+In the erb view file:
+<%=f.checkbox_group :compatible_with, [['iPhone 3GS',1],['iPhone 4G',2]] %>
+will generate the checkbox group for this column.
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 Hao Chen, released under the MIT license
